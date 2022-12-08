@@ -1,0 +1,5 @@
+(executables
+ (names part1 part2)
+ (libraries base stdio str ppx_deriving)
+ (preprocess
+  (pps ppx_deriving.show)))
