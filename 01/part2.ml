@@ -18,6 +18,6 @@ let () =
   let summed = List.map ~f:(List.fold ~init:0 ~f:( + )) grouped_ints in
   let top3_summed =
     List.fold ~init:0 ~f:( + )
-    @@ List.take (List.sort ~compare:(fun a b -> -1 * compare_int a b) summed) 3
+    @@ List.take (List.sort ~compare:Int.descending summed) 3
   in
   printf "%d\n" top3_summed
